@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Geospatial Analytics Dashboard Design System */
+
+@layer base {
+  :root {
+    /* Dark theme inspired by reference dashboard */
+    --background: 220 20% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 14%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Purple accent inspired by reference */
+    --primary: 270 70% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 210 40% 90%;
+
+    --muted: 220 20% 16%;
+    --muted-foreground: 215 16% 55%;
+
+    --accent: 220 20% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 16%;
+    --ring: 270 70% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom dashboard colors */
+    --chart-1: 270 70% 60%;    /* Purple */
+    --chart-2: 170 70% 50%;    /* Teal */
+    --chart-3: 60 80% 55%;     /* Yellow */
+    --chart-4: 220 70% 55%;    /* Blue */
+    --chart-5: 320 70% 55%;    /* Pink */
+    
+    /* Map colors */
+    --map-low: 120 60% 40%;    /* Green */
+    --map-medium: 45 90% 50%;  /* Orange */
+    --map-high: 0 75% 55%;     /* Red */
+    
+    /* Gradients */
+    --gradient-dashboard: linear-gradient(135deg, hsl(var(--background)), hsl(220 20% 8%));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(220 20% 12%));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(270 70% 50%));
+    
+    /* Shadows */
+    --shadow-card: 0 8px 32px -8px hsl(220 20% 5% / 0.6);
+    --shadow-elevated: 0 16px 64px -12px hsl(220 20% 5% / 0.8);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Use same dark theme as default */
+    --background: 220 20% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-background to-background/90 text-foreground antialiased;
+    background-attachment: fixed;
+  }
+}
