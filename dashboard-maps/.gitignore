@@ -1,3 +1,6 @@
+# virtual environment
+evn/ 
+.evn
 # Logs
 logs
 *.log
